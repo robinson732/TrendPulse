@@ -1,0 +1,18 @@
+{
+  "_README": "Add this plugin entry to app.json 'plugins' array when switching to a native dev build. Do NOT add it while using Expo Go — it will crash Metro.",
+  "_STEPS": [
+    "1. Run: npx expo install react-native-google-mobile-ads expo-dev-client",
+    "2. Replace the placeholder IDs below with your real AdMob App IDs",
+    "3. Copy the 'plugin' array entry below into app.json plugins",
+    "4. Run: eas build --profile development"
+  ],
+  "plugin": [
+    "react-native-google-mobile-ads",
+    {
+      "androidAppId": "ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx",
+      "iosAppId": "ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx",
+      "delayAppMeasurementInit": true,
+      "skipInitialization": false
+    }
+  ]
+}
